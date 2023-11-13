@@ -60,7 +60,7 @@ export default function Main({step, nextStep,previousStep, goToStep}) {
 
         {/*Navigation buttons to move from one step to another*/}
 
-        <div className="navigationContainer flex flex-row justify-end mt-10 absolute md:relative bottom-0 left-0 w-screen md:w-full bg-white py-4 px-4 md:px-0 md:py-0 ">
+        <div className="navigationContainer flex flex-row justify-end mt-10 fixed md:relative bottom-0 left-0 w-screen md:w-full bg-white py-4 px-4 md:px-0 md:py-0 ">
             {step > 0 && !isSummaryConfirmed && <button className='rounded bg-white py-4 px-6 text-coolGrey hover:text-third mr-auto' onClick={previousStep}>Go Back</button> }
 
             {step === 3 && isSummaryConfirmed ? null : (
