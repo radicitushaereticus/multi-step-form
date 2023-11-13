@@ -74,7 +74,7 @@ export default function Plans({formData, setFormData, onValidityChange}) {
                 <p className='text-coolGrey'>You have the option of monthly or yearly billing.</p>
             </div>
         
-            <ul className="grid w-full gap-6 md:grid-cols-3 ">
+            <ul className="grid w-full gap-4 md:grid-cols-3 ">
                 {plans.map(plan => (
                 <li className="flex flex-col" key={plan.id}>
                     <input 

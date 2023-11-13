@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className='flex md:items-center md:justify-center md:min-h-screen'>
-        <div className='flex md:flex-row md:rounded-xl md:bg-white shadow-sm md:p-4 md:w-[850px] gap-x-4 flex-col'>
+        <div className='flex md:flex-row md:rounded-xl md:bg-white md:shadow-sm md:p-4 md:w-[950px] gap-x-4 flex-col '>
           <Sidebar steps={steps} currentStep={step} /> 
           <Main 
             step={step}
