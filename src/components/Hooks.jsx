@@ -1,8 +1,9 @@
 import React,{ useState } from 'react'
 
 export function useMultistep(steps) {
-  const [step,setStep] = useState(0)
-  const [isStepValid,setStepValid] = useState(false)
+  const [ step, setStep ] = useState(0)
+
+  
 
   function previousStep() {
     setStep(step => {
@@ -18,11 +19,14 @@ function nextStep() {
   })
 
 }
+
+function goToStep(targetStep) {
+  setStep(targetStep)
+}
   
   return ({ step,
       nextStep,
       previousStep,
-      setStepValid,
-      isStepValid,
+      goToStep,
     })
 }

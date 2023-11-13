@@ -3,6 +3,7 @@ import './App.css'
 import Sidebar from "./components/sidebar.jsx"
 import Main from './components/Main'
 import { useMultistep } from './components/Hooks'
+
 function App() {
 
   const [steps, setSteps] = useState([
@@ -27,19 +28,21 @@ function App() {
     },
   ])
 
-  const {step, nextStep,previousStep, isStepValid, setStepValid} = useMultistep(steps)
+
+  const {step, nextStep,previousStep, isStepValid, setStepValid, goToStep} = useMultistep(steps)
 
   return (
-      <div className='container mx-auto h-10 grid grid-cols-3 p-7 min-h-[1200px]'>
-        <Sidebar steps={steps} currentStep={step}/> 
-        <Main 
-              step={step}
-              nextStep={nextStep} 
-              previousStep={previousStep}
-              isStepValid={isStepValid}
-              setStepValid={setStepValid} 
-        />
-      </div>
+    <div className='flex md:items-center md:justify-center md:min-h-screen'>
+        <div className='flex md:flex-row md:rounded-xl md:bg-white shadow-sm md:p-4 md:w-[850px] gap-x-4 flex-col'>
+          <Sidebar steps={steps} currentStep={step} /> 
+          <Main 
+            step={step}
+            nextStep = {nextStep}
+            previousStep = {previousStep}
+            goToStep = {goToStep}
+          />
+        </div>
+    </div>
   )
 }
 
